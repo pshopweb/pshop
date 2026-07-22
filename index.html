@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PShop - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-store"></i>
+                    <span>PShop</span>
+                </a>
+
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                    <a href="html/cart.html" class="nav-link cart-link">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <div class="user-menu" id="userMenu">
+                        <button class="nav-link user-btn" id="userBtn">
+                            <i class="fas fa-user"></i> <span id="userName">Account</span>
+                        </button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="html/profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="html/orders.html"><i class="fas fa-box"></i> My Orders</a>
+                            <a href="html/messages.html"><i class="fas fa-envelope"></i> Messages</a>
+                            <a href="html/settings.html"><i class="fas fa-cog"></i> Settings</a>
+                            <hr>
+                            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="html/index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="html/cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="html/profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="html/orders.html"><i class="fas fa-box"></i> Orders</a>
+        <a href="html/login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </div>
+
+    <!-- Banner Slider -->
+    <section class="banner-section">
+        <div class="banner-slider" id="bannerSlider">
+            <div class="banner-slide active">
+                <img src="assets/images/banner1.jpg" alt="Banner 1">
+                <div class="banner-content">
+                    <h2>Welcome to PShop</h2>
+                    <p>Discover amazing products at great prices</p>
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="assets/images/banner2.jpg" alt="Banner 2">
+                <div class="banner-content">
+                    <h2>New Arrivals</h2>
+                    <p>Check out our latest collection</p>
+                    <a href="#products" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="assets/images/banner3.jpg" alt="Banner 3">
+                <div class="banner-content">
+                    <h2>Special Offers</h2>
+                    <p>Up to 50% off on selected items</p>
+                    <a href="#products" class="btn btn-primary">View Deals</a>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <img src="assets/images/banner4.jpg" alt="Banner 4">
+                <div class="banner-content">
+                    <h2>Special Offers</h2>
+                    <p>Up to 50% off on selected items</p>
+                    <a href="#products" class="btn btn-primary">shop now</a>
+                </div>
+            </div>
+        </div>
+        <div class="banner-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid" id="categoriesGrid">
+                <div class="category-card" data-category="electronics">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Electronics</h3>
+                </div>
+                <div class="category-card" data-category="clothing">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Clothing</h3>
+                </div>
+                <div class="category-card" data-category="accessories">
+                    <i class="fas fa-gem"></i>
+                    <h3>Accessories</h3>
+                </div>
+                <div class="category-card" data-category="home">
+                    <i class="fas fa-home"></i>
+                    <h3>Home & Living</h3>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <i class="fas fa-football"></i>
+                    <h3>Sports</h3>
+                </div>
+                <div class="category-card" data-category="beauty">
+                    <i class="fas fa-spa"></i>
+                    <h3>Beauty</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="new">New</button>
+                    <button class="filter-btn" data-filter="popular">Popular</button>
+                    <button class="filter-btn" data-filter="sale">On Sale</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products loaded dynamically -->
+            </div>
+            <div class="loading-spinner" id="loadingSpinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading products...</p>
+            </div>
+            <div class="no-products" id="noProducts" style="display:none;">
+                <i class="fas fa-box-open"></i>
+                <p>No products found</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-store"></i> PShop</h3>
+                    <p>Your one-stop destination for quality products at amazing prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/pshopnawada" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@pshopnawada" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="html/index.html">Home</a>
+                    <a href="html/about.html">About Us</a>
+                    <a href="html/cart.html">Cart</a>
+                    <a href="html/orders.html">Orders</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="html/messages.html">Contact Us</a>
+                    <a href="html/about.html">FAQ</a>
+                    <a href="html/settings.html">Settings</a>
+                    <a href="html/about.html">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i>  pshopnawada@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>  8298799319</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
